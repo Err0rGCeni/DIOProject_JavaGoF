@@ -1,0 +1,13 @@
+package dio.ceni.strategies;
+
+import dio.ceni.Wizard;
+
+public class FullDefenseStrategy implements DefenseStrategy {
+    
+    @Override
+    public void apply(Wizard wizard) {
+        System.out.println("Executing full defense strategy...");
+        wizard.getDefenseSpells().forEach(spell -> System.out.println("Casting " + spell.getName() + ": " + spell.getDescription()));
+        System.out.println(">>@>> " + wizard.getName() + " is heavy 'ç'! <<@<<");
+    }
+}
